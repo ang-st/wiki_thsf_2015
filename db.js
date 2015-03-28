@@ -53,7 +53,6 @@ function fullPath(files) {
 // Load a file, parse the title and generate the HTML
 exports.loadPage = function (name, callback) {
   var path = pathFromNameMd(name);
-  console.log("..."+name)
 //  if (name != "home"){
 //    return callback(null,{exists: false})
 
@@ -85,7 +84,6 @@ exports.loadPage = function (name, callback) {
 
 exports.editPage = function (name, callback) {
   var path = pathFromNameMd(name);
-  console.log(path) 
 
   
   FS.readFile(path, 'utf8', function (err, markdown) {
@@ -120,7 +118,7 @@ exports.editPage = function (name, callback) {
       name: name,
       title: null,
       exists: exists,
-      markdown: markdown,
+      markdown: unescape(markdown),
       html: html,
     });
    
@@ -131,8 +129,6 @@ exports.editPage = function (name, callback) {
 // Saving is simple.  Just put the markdown in the file
 exports.savePage = function (name, value, callback) {
   var path = pathFromNameMd(name);
-  console.log(path)
-  console.log(value)
   FS.writeFile(path, value, callback);
 };
 

@@ -7,19 +7,47 @@ body {
   background-color: #000000;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   color: #ffffff;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 a {
   color: #00B7FF;
 }
 
+#title_text{
+
+  font-family: "andale mono", "lucida console", monospace;
+  font-size:30px;
+}
+
 #home {
   display:block;
 }
 
-#markdown-editor {
-  margin-top:50px;
-  min-width:500px;
-  min-height:300px;
-  color: #000000
+table {
+  margin-left: auto;
+  margin-right: auto;
+  border-collapse : collapse;
+}
+table th,
+table td {
+  padding : 4px 8px;
+  border : 1px solid #aaa;
+}
+ul {
+  padding-left: 2em;
+}
+
+#logo {
+  display: block;
+  margin-top: 50px;
+  margin-bottom: 70px;
+  margin-left: auto;
+  margin-right: auto;
+  width:30%;
+  padding: 20%;
+  background-image: url(../images/logo.png);
+  background-size: contain;
+  background-repeat: no-repeat;
 }

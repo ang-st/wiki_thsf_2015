@@ -1,5 +1,6 @@
 include ./layout.jade
   .container-fluid
+     #logo
      each item in torender     
         div(id= item.divId)!= item.html
           if isAuth 

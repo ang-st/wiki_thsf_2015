@@ -7,7 +7,7 @@ jQuery(function($){
 
   var tx_input     = $('#tx_input');
   var input        = tx_input[0];
-  input.value = input.innerHTML;
+  input.value = input.textContent;
   tx_input.val(input.value)
   var text_preview = $('#text_preview')[0];
   var html_output  = $('#html_output')[0];
