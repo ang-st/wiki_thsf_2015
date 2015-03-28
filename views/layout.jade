@@ -2,19 +2,23 @@ doctype html
 html
   head
     title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
-    link(rel='stylesheet', href='http://lbesson.bitbucket.org/md/themes/cyborg.min.css')
+    link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
+    
+    //link(rel='stylesheet', href='http://lbesson.bitbucket.org/md/themes/cyborg.min.css')
     link(rel='stylesheet', href='http://lbesson.bitbucket.org/md/themes/bootstrap-responsive.min.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    script(src='/js/jquery.min.js')
+    script(src='/js/bootstrap.min.js')
   body
-    nav.navbar.navbar-default
       div.container-fluid
-          ul.nav.nav-pills
-            li(role="presentation" )
-              a(href="#home") THSF
-            li(role="presentation")
-              a(href="#presentation") presentation
-            li(role="presentation" )
-              a(href="#programme") preogramme
+        nav.navbar.navbar-default.navbar-fixed-top
+          ul.nav.navbar-nav
+              li(role="presentation" )
+                a(href="#home") THSF
+              li(role="presentation")
+                a(href="#presentation") presentation
+              li(role="presentation" )
+                a(href="#programme") preogramme
 
   block body
 

@@ -54,10 +54,10 @@ function fullPath(files) {
 exports.loadPage = function (name, callback) {
   var path = pathFromNameMd(name);
   console.log("..."+name)
-  if (name != "home"){
-    return callback(null,{exists: false})
+//  if (name != "home"){
+//    return callback(null,{exists: false})
 
-  }
+//  }
   
 
   FS.readdir(pathFromDir(), function(err,files){
@@ -65,10 +65,10 @@ exports.loadPage = function (name, callback) {
       var fileObj = []
       async.map(pathfiles, FS.readFile, function(err, data){
           for( var  i = 0; i < files.length; i++){
-            console.log(files[i])
+            //console.log(files[i])
             try{
               var html = Markdown(data[i].toString())
-              console.log(html)
+              //console.log(html)
               fileObj.push({name : files[i], markdown:data[i], html:html} )
             }
             catch (err){ }
@@ -85,7 +85,7 @@ exports.loadPage = function (name, callback) {
 
 exports.editPage = function (name, callback) {
   var path = pathFromNameMd(name);
- 
+  console.log(path) 
 
   
   FS.readFile(path, 'utf8', function (err, markdown) {
@@ -131,6 +131,8 @@ exports.editPage = function (name, callback) {
 // Saving is simple.  Just put the markdown in the file
 exports.savePage = function (name, value, callback) {
   var path = pathFromNameMd(name);
+  console.log(path)
+  console.log(value)
   FS.writeFile(path, value, callback);
 };
 

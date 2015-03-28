@@ -4,12 +4,12 @@ var DB = require('../db');
 var Model = require('../model')
 var bcrypt = require('bcrypt-nodejs');
 // When the wiki is initially loaded, simply redirect to the `home` page.
-exports.index = function(req, res) {
-  res.redirect("/home");
-};
+//exports.index = function(req, res) {
+//  res.redirect("/home");
+//};
 
 // Load a page from the database and render as html
-exports.view = function (req, res, next) {
+exports.index = function (req, res, next) {
   DB.loadPage(req.params.name, function (err, page) {
     if (err) return next(err);
     if (page.exists==false && !req.isAuthenticated())
@@ -41,10 +41,11 @@ exports.save = function (req, res, next) {
       res.redirect('/signin');
   } 
   else {
+  console.log(req.body)
   DB.savePage(req.params.name, req.body.markdown, function (err) {
     if (err) return next(err)
     //res.redirect("/" + req.params.name);
-    res.redirect("/home");
+    res.redirect("/");
   });
   }
 }

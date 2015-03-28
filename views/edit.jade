@@ -1,5 +1,20 @@
 include ./layout.jade
-h1= title
-form(method="post", action="/" + name)
-  textarea(name="markdown")= markdown
-  input(type="submit")
+link(rel='stylesheet', href='/stylesheets/editor.css')
+script(src="/js/jquery.minitabs.js")
+script(src="/js/textile.min.js")
+script(src="/js/editor.js")
+h1 edit
+
+.container-fluid
+  p
+  p
+  p
+  p
+  #col_left.col
+    span(class="tools")
+    form(method="post", action="/" + name)
+      textarea( name='markdown',id="tx_input", class='panel', cols="80", rows='20' )= markdown
+      button(type="submit", class="btn btn-danger") update
+
+  #col_right.col
+    #text_preview.panel

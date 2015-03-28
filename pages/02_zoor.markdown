@@ -1,6 +1,6 @@
-h3. zoor
+h3. bla
 
-|_. Tables        |_. Are           |_. Cool  |
-| col 3 is      | p(heay). right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
+|_. head |_. table |_. row |
+| a | table | row 11 |
+| a | table | row 2 |
+

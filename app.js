@@ -60,8 +60,8 @@ App.configure(function(){
   App.use(passport.session());
   App.use(Express.bodyParser());
   App.use(Express.methodOverride());
-  App.use(App.router);
   App.use(Express.static(__dirname + '/public'));
+  App.use(App.router);
 });
 
 App.configure('development', function(){
@@ -79,7 +79,7 @@ App.post('/signin', Routes.signInPost);
 App.get('/signup', Routes.signUp);
 App.post('/signup', Routes.signUpPost);
 App.get('/signout', Routes.signout)
-App.get('/:name', Routes.view);
+//App.get('/:name', Routes.view);
 App.get('/:name/edit', Routes.edit);
 App.post('/:name', Routes.save);
 
