@@ -1,29 +1,93 @@
 var FS = require('fs');
 var Path = require('path');
-var Markdown = require("marked");
+//var Markdown = require("marked");
 //var MdRenderer=require("./md-override")
 var knex = require("knex");
 var Bookshelf = require('bookshelf');
+var async = require('async');
+var textile = require('textile-js')
 
 
-Markdown.setOptions({
-  renderer: new Markdown.Renderer(),
-  gfm: true,
-  tables: true,
-  sanitize: false
+var Markdown =  textile //Markdown = require('js-markdown-extra').Markdown
 
-})
+function orderize(files){
+   var pageObjs = []
+   for (var i = 0; i<files.length; i++){
+     var file = files[i].name
+     var order = parseInt(file.split("_")[0])
+     if(!isNaN(order)) {
+      var divId = file.split("_")[1].split(".markdown")[0]
+      var md = files[i].markdown
+      var html = files[i].html
+      pageObjs.push ({name: file.split(".markdown")[0], order:order, divId:divId, markdown:md, html:html })
+    }
+   }
+  return pageObjs.sort(function(a,b){ return a.order - b.order });
+ }
+
 
 // This function is used to map wiki page names to files
 // on the real filesystem.
-function pathFromName(name) {
+function pathFromNameMd(name) {
   return Path.join(__dirname, "pages", name + ".markdown");
+}
+
+function pathFromName(name) {
+  return Path.join(__dirname, "pages", name);
+}
+
+
+function pathFromDir() {
+  return Path.join(__dirname, "pages");
+}
+
+
+function fullPath(files) {
+  var paths = []
+  for (var i= 0; i < files.length; i++)
+    paths.push(pathFromName(files[i]))
+
+  return paths 
 }
 
 // Load a file, parse the title and generate the HTML
 exports.loadPage = function (name, callback) {
-  var path = pathFromName(name);
+  var path = pathFromNameMd(name);
+  console.log("..."+name)
+  if (name != "home"){
+    return callback(null,{exists: false})
 
+  }
+  
+
+  FS.readdir(pathFromDir(), function(err,files){
+      var pathfiles=fullPath(files)
+      var fileObj = []
+      async.map(pathfiles, FS.readFile, function(err, data){
+          for( var  i = 0; i < files.length; i++){
+            console.log(files[i])
+            try{
+              var html = Markdown(data[i].toString())
+              console.log(html)
+              fileObj.push({name : files[i], markdown:data[i], html:html} )
+            }
+            catch (err){ }
+            
+          }
+          var torender = orderize(fileObj)
+          callback(null,{exists:true, torender:torender})
+          
+      })  
+
+  })
+
+};
+
+exports.editPage = function (name, callback) {
+  var path = pathFromNameMd(name);
+ 
+
+  
   FS.readFile(path, 'utf8', function (err, markdown) {
 
     var exists = true;
@@ -49,7 +113,8 @@ exports.loadPage = function (name, callback) {
         break;
       }
     }*/
-    var html = Markdown(markdown);
+
+  var html = Markdown(markdown);
     
     callback(null, {
       name: name,
@@ -58,13 +123,14 @@ exports.loadPage = function (name, callback) {
       markdown: markdown,
       html: html,
     });
+   
 
   });
+ 
 };
-
 // Saving is simple.  Just put the markdown in the file
 exports.savePage = function (name, value, callback) {
-  var path = pathFromName(name);
+  var path = pathFromNameMd(name);
   FS.writeFile(path, value, callback);
 };
 

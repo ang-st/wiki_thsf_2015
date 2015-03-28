@@ -12,6 +12,11 @@ exports.index = function(req, res) {
 exports.view = function (req, res, next) {
   DB.loadPage(req.params.name, function (err, page) {
     if (err) return next(err);
+    if (page.exists==false && !req.isAuthenticated())
+      res.redirect('/')
+    if (page.exists==false && req.isAuthenticated())
+      res.redirect('/'+req.params.name+"/edit")
+    page['isAuth']=req.isAuthenticated()
     res.render('view', page);
   });
 };
@@ -23,7 +28,7 @@ exports.edit = function (req, res, next) {
       res.redirect('/signin');
   }
   else{
-  DB.loadPage(req.params.name, function (err, page) {
+  DB.editPage(req.params.name, function (err, page) {
     if (err) return next(err);
     res.render('edit', page);
   });
@@ -38,7 +43,8 @@ exports.save = function (req, res, next) {
   else {
   DB.savePage(req.params.name, req.body.markdown, function (err) {
     if (err) return next(err)
-    res.redirect("/" + req.params.name);
+    //res.redirect("/" + req.params.name);
+    res.redirect("/home");
   });
   }
 }

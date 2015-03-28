@@ -1,6 +1,6 @@
 include ./layout.jade
   .container-fluid
-        h1= title
-          
-        .document!= html
-        a(href="/" + name + "/edit")= "Edit this Page"
+     each item in torender     
+        div(id= item.divId)!= item.html
+          if isAuth 
+            a(href="/" + item.name + "/edit")= "Edit this Page"
