@@ -1,10 +1,18 @@
 var FS = require('fs');
 var Path = require('path');
-var Markdown = require('markdown').markdown;
+var Markdown = require("marked");
 var knex = require("knex");
 
 var Bookshelf = require('bookshelf');
 
+
+Markdown.setOptions({
+  renderer: new Markdown.Renderer(),
+  gfm: true,
+  tables: true,
+  sanitize: true
+
+})
 // This function is used to map wiki page names to files
 // on the real filesystem.
 function pathFromName(name) {
@@ -31,7 +39,7 @@ exports.loadPage = function (name, callback) {
     }
 
     // Parse and render the markdown.
-    var tree = Markdown.parse(markdown);
+    /*var tree = Markdown.parse(markdown);
     var title = name;
     for (var i = 1, l = tree.length; i < l; i++) {
       if (tree[i] && tree[i][0] === "header") {
@@ -39,12 +47,12 @@ exports.loadPage = function (name, callback) {
         tree.splice(i, 1);
         break;
       }
-    }
-    var html = Markdown.toHTML(tree);
+    }*/
+    var html = Markdown(markdown);
 
     callback(null, {
       name: name,
-      title: title,
+      title: null,
       exists: exists,
       markdown: markdown,
       html: html,
