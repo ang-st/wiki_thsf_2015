@@ -1,6 +1,9 @@
 var FS = require('fs');
 var Path = require('path');
 var Markdown = require('markdown').markdown;
+var knex = require("knex");
+
+var Bookshelf = require('bookshelf');
 
 // This function is used to map wiki page names to files
 // on the real filesystem.
@@ -55,3 +58,26 @@ exports.savePage = function (name, value, callback) {
   var path = pathFromName(name);
   FS.writeFile(path, value, callback);
 };
+
+var dbFile = Path.join(__dirname, 'app.db');
+var DB = Bookshelf(knex({
+   client: 'sqlite3', 
+   connection: { filename: dbFile }
+}));
+
+FS.exists(dbFile, function(exists) {
+    if (!exists) {
+        console.log("create a new DB")
+        DB.knex.schema.createTable('Users', function(table) {
+            table.increments("id")
+            table.string('username')
+            table.string('password')
+        }).then( function(){ console.log("DB created") })
+    }
+})
+
+exports.DB = DB;
+
+
+
+

@@ -1,0 +1,13 @@
+h2 signin
+form(method='post', action="/signin")
+  if errorMessage
+    span= errorMessage
+  p
+    label(for="username") username
+    input(id="username", type="text",placeholder='username',required="true" ,name ='username')
+  p
+    label(for="password") password
+    input(id="password", type='text', placeholder='password', required="true", name = 'password')
+  p
+    input(type='submit',name="signin", id='signin')
+    a(href="/signup", title="register") signup
