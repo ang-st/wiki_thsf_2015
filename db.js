@@ -1,8 +1,8 @@
 var FS = require('fs');
 var Path = require('path');
 var Markdown = require("marked");
+//var MdRenderer=require("./md-override")
 var knex = require("knex");
-
 var Bookshelf = require('bookshelf');
 
 
@@ -10,9 +10,10 @@ Markdown.setOptions({
   renderer: new Markdown.Renderer(),
   gfm: true,
   tables: true,
-  sanitize: true
+  sanitize: false
 
 })
+
 // This function is used to map wiki page names to files
 // on the real filesystem.
 function pathFromName(name) {
@@ -49,7 +50,7 @@ exports.loadPage = function (name, callback) {
       }
     }*/
     var html = Markdown(markdown);
-
+    
     callback(null, {
       name: name,
       title: null,
