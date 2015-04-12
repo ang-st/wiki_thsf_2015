@@ -1,4 +1,4 @@
-h3. !</images/globe.png! Conférences 
+h3. !</images/globe.png! Conferences 
 
 | Bernard STIEGLER (Philosophe) | |  TBA|
 |Jérémie ZIMMERMAN (cofondateur de la Quadrature du Net) | Droits et libertés sur Internet | TBA |
