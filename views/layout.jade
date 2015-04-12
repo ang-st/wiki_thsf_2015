@@ -3,22 +3,32 @@ html
   head
     title= title
     link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
-    
+    meta( name="viewport" content="width=device-width, initial-scale=1")
     //link(rel='stylesheet', href='http://lbesson.bitbucket.org/md/themes/cyborg.min.css')
     link(rel='stylesheet', href='http://lbesson.bitbucket.org/md/themes/bootstrap-responsive.min.css')
     link(rel='stylesheet', href='/stylesheets/style.css')
     script(src='/js/jquery.min.js')
     script(src='/js/bootstrap.min.js')
   body
+     nav.navbar.navbar-default.navbar-fixed-top
       div.container-fluid
-        nav.navbar.navbar-default.navbar-fixed-top
           ul.nav.navbar-nav
               li(role="presentation" )
-                a(href="#logo") THSF
-              li(role="presentation")
-                a(href="#home") presentation
+                img(src="/images/logo_small.png" class="img-logo")
               li(role="presentation" )
-                a(href="#programm") programme
-
+                a(href="#home", class="anchor") presentation
+              li(role="presentation" )
+                a(href="#conference", class="anchor") conférences
+              li(role="presentation" )
+                a(href="#ateliers", class="anchor") ateliers
+              li(role="presentation" )
+                a(href="#install", class="anchor") expositions
+              li(role="presentation" )
+                a(href="#concert", class="anchor") concerts
+              li(role="presentation" )
+                a(href="#infos", class="anchor") infos pratiques
+              li(role="presentation" )
+                a(href="#contact", class="anchor") contact
+          #title_text [THSF] 14-17/05/2015@Toulouse:/less/is/more 
   block body
 

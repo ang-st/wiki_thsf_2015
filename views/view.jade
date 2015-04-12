@@ -1,7 +1,7 @@
 include ./layout.jade
-  .container-fluid
+  div.container-fluid
      #logo
      each item in torender     
-        div(id= item.divId)!= item.html
+        div(id= item.divId, class="content_box")!= item.html
           if isAuth 
             a(href="/" + item.name + "/edit")= "Edit this Page"

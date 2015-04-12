@@ -66,9 +66,9 @@ exports.loadPage = function (name, callback) {
           for( var  i = 0; i < files.length; i++){
             //console.log(files[i])
             try{
-              var html = Markdown(data[i].toString())
-              //console.log(html)
-              fileObj.push({name : files[i], markdown:data[i], html:html} )
+              var html = Markdown(data[i].toString().replace(/\r/g,""))
+              console.log(data[i].toString())
+              fileObj.push({name : files[i], markdown:data[i].toString(), html:html} )
             }
             catch (err){ }
             
@@ -129,7 +129,7 @@ exports.editPage = function (name, callback) {
 // Saving is simple.  Just put the markdown in the file
 exports.savePage = function (name, value, callback) {
   var path = pathFromNameMd(name);
-  FS.writeFile(path, value, callback);
+  FS.writeFile(path, value.replace(/\r/g,""), callback);
 };
 
 var dbFile = Path.join(__dirname, 'app.db');
