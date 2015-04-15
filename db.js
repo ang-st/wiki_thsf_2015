@@ -67,7 +67,6 @@ exports.loadPage = function (name, callback) {
             //console.log(files[i])
             try{
               var html = Markdown(data[i].toString().replace(/\r/g,""))
-              console.log(data[i].toString())
               fileObj.push({name : files[i], markdown:data[i].toString(), html:html} )
             }
             catch (err){ }

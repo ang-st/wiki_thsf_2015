@@ -76,8 +76,8 @@ App.configure('production', function(){
 App.get('/', Routes.index);
 App.get('/signin', Routes.signIn);
 App.post('/signin', Routes.signInPost);
-App.get('/signup', Routes.signUp);
-App.post('/signup', Routes.signUpPost);
+//App.get('/signup', Routes.signUp);
+//App.post('/signup', Routes.signUpPost);
 App.get('/signout', Routes.signout)
 //App.get('/:name', Routes.view);
 App.get('/:name/edit', Routes.edit);
