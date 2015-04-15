@@ -11,15 +11,6 @@
   src: url("/fonts/Frontage-Bold.otf") format("opentype");
 }
 
-
-
-.content_block_red{
-  background-color: #f16237;
-  min-width:100%;
-  padding:0;     
-  margin:0;     
- } 
-
 a:link {
     color: #777777;
 }
@@ -28,19 +19,6 @@ a:link {
 a:visited {
     color: #f16237;
 }
-
-.red_back {                                                        
-     background-repeat: no-repeat;
-     background-image: url(../images/bluuu.svg);
-     background-color: #f16237;
-     min-width:100%;       
-     min-height:10px;       
-     background-position: left bottom; 
-     background-clip: padding-box;
-     padding:0;     
-     margin:0;     
-     }
-
 .section {
   margin-left: auto;
   margin-right: auto;
@@ -81,12 +59,13 @@ a {
 .navbar-fixed-top {
   font-family: 'Frontage-regular';
   background-color: #ffffff;
-  font-size:1vw;
+  font-size:0.95vw;
   border-color: #f1623b;;  
 }
 
 .navbar-default .navbar-nav>li>a{
   color:#000000;
+   margin-left: 0; width: auto !important;
 }
 
 #home {
