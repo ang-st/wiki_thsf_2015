@@ -1,4 +1,3 @@
-h3. !/images/LOGO_THSF_128.png! Présentation
 
 Issue d'une collaboration entre le "Tetalab":http://tetalab.org/ et "Mix’Art Myrys":http://mixart-myrys.org/presentation/, le Toulouse Hacker Space Factory est, depuis 2010, une rencontre autour de conférences, d’ateliers de pratiques et de propositions artistiques, ayant trait aux nouvelles technologies, dans la dynamique des hackerspaces. C’est un événement basé sur la mise en commun de connaissances, un moment festif et convivial tourné vers l’utilisation créative des technologies, leurs appropriations et les enjeux que cela suscite.
 Il est ouvert à tout-e-s, débutant-e-s ou non, expert-e-s ou intéressé-e-s.

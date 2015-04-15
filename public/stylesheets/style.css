@@ -1,3 +1,4 @@
+* { margin:0; padding:0; }
 
 @font-face {
   font-family: 'Frontage';
@@ -11,28 +12,84 @@
 }
 
 
+
+.content_block_red{
+  background-color: #f16237;
+  min-width:100%;
+  padding:0;     
+  margin:0;     
+ } 
+
+a:link {
+    color: #777777;
+}
+
+/* visited link */
+a:visited {
+    color: #f16237;
+}
+
+.red_back {                                                        
+     background-repeat: no-repeat;
+     background-image: url(../images/bluuu.svg);
+     background-color: #f16237;
+     min-width:100%;       
+     min-height:10px;       
+     background-position: left bottom; 
+     background-clip: padding-box;
+     padding:0;     
+     margin:0;     
+     }
+
+.section {
+  margin-left: auto;
+  margin-right: auto;
+  min-width:70%;  
+  max-width:70%;
+  padding-bottom:5em;    
+}
+.section img{
+  height:5%;
+  width:5%;
+}
+
+.section h3{
+  text-align:right;
+  margin-right:2%;
+}
+
 body {
-  padding: 50px;
+  padding-bottom:0;
   padding-top: 120px;
-  /*background-color: #f1623b;*/
+
+}
+
+#main {
+  text-align:center;
+  min-width: 30%; 
+  padding-bottom:10em;
+}
+  /*
+  padding-bottom: 0px;
+  background-color: #f1623b;
   background-color: #000000;
   font: 14px  "Lucida Grande", Helvetica, Arial, sans-serif;
   color: #ffffff;
   margin-left: auto;
+
+/*
   margin-right: auto;
   background-image: url(../images/logo1.png) ;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-position: center top; 
   background-size: contain;
-  background-clip: padding-box;*/
-/*
+  background-clip: padding-box;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-*/
 }
+*/
 @media screen and (max-width: 768px) {
     body { padding-top: 0px; }
 }
@@ -43,17 +100,17 @@ a {
 
 .navbar-fixed-top {
   font-family: 'Frontage-regular';
-  background-color: #000000;
+  background-color: #ffffff;
   font-size:1vw;
   border-color: #f1623b;;  
 }
 
 .navbar-default .navbar-nav>li>a{
-  color:#ffffff;
+  color:#000000;
 }
 
 #home {
-  display:block;
+  /*display:block;*/
 }
 .img-logo{
   padding-top:30%;
@@ -71,66 +128,43 @@ h3 {
 }
 */
 
-
-/*a.anchor{display: block; position: relative; top: -10px; visibility: hidden;}*/
-
-.content_box{
-  background-color: #ffffff;
-  color: #000000;
-  padding: 5%;
-  margin: 3%;
-  padding-top: 30px;
-  margin-bottom:30px;
-  min-width:0%;
-  min-height:0%;
-  opacity: 0.85;
+#main h3{
+  text-align:center;
 }
-
-.content_box h3 {
-  font-family: 'Frontage';
-  text-align:center
-}
-
-.content_box h4 {
-  font-family: 'Frontage';
-  text-align:center
-}
-
-.content_box img {
-  margin:10px;
-  max-width:100px;
-}
-.content_box table {
+.section table {
   /*display: table;*/
   margin-left: auto;
   margin-right: auto;
-  min-width:80%;
   border-collapse : collapse;
   text-align:center;
+  
 }
-.content_box table th,
-.content_box table td {
+.section table th,
+.section table td {
   padding : 4px 8px;
   border : 1px solid #aaa;
+  min-width:30px;
 }
-.content_box ul {
+.section ul {
   padding-left: 2em;
 }
-/*
+
 #logo {
   display: block;
-  margin-top: 50px;
+  /*margin-top: 50px;*/
   margin-left: auto;
   margin-right: auto;
-  width:25%;
-  padding: 15%;
-  background-image: url(../images/logo.png);
+  width:40%;
+  padding: 10%;
+  background-image: url(../images/logo_thsf.svg);
   background-size: contain;
-  filter: invert(100%);
+  background-position: top center; 
+/*  filter: invert(100%);
   -webkit-filter: invert(100%);
+*/
   background-repeat: no-repeat;
 }
-*/
+
 #title_text{
   
   font-family: "andale mono", "lucida console", monospace;
@@ -143,5 +177,21 @@ h3 {
 
 }
 
+.content_box:before{
+      content:<p/>;
+      z-index:-1;
+      margin:0;
+      padding-top:50px;
+      width:20%;
+      margin-bottom:-20px;
+      border-bottom: 10px solid rgb(0,0,0);
+      border-right: 10px solid transparent;
+}
+
+.content_box:nth-of-type(odd):before{
+
+      border-bottom: 10px solid rgb(255,255,255);
+      border-right: 10px solid transparent;
+}
 
 

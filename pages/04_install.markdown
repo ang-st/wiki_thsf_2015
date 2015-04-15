@@ -1,4 +1,4 @@
-h3. !/images/LOGO_THSF_128.png!Performances et installations
+h3. Performances et installations!/images/LOGO_THSF_128.png!
 
 | "POUSSY DRAMA":https://www.indiegogo.com/projects/le-cabinet-mobile-du-docteure-duchesne| Consultations en DIY open source sexologie| du 14 au 17 mai"|
 | BODY BOUDHISME | Lévitation Assistée par Ordinateur| du 14 au 17 mai|

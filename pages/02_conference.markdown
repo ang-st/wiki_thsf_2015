@@ -1,4 +1,4 @@
-h3. !/images/LOGO_THSF_128.png! Conférences 
+h3. Conférences 
 
 | Bernard STIEGLER ("Philosophe":https://fr.wikipedia.org/wiki/Bernard_Stiegler)| Ouverture THSF 2015 LESS IS MORE| jeudi 16h|
 | Philippe LANGLOIS (télécommunications et sécurité sur le net) | LTE et VoLTE Pwns: insécurité à long terme | jeudi 18h|
