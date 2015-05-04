@@ -11,7 +11,9 @@ h3. Performances et installations
 | "PREVIMETEO":http://www.previmeteo.com/about/previmeteo.php | Stations météo professionnelles sous arduino | jeudi |
 | "DENISE BRESCIANI":http://architecturesdebouche.fr/ "& ILIAS LIOSATOS":http://iliosatos.wix.com/ilias| Jeu de mets #2| jeudi 20h30|
 | "POBORSK":https://soundcloud.com/poborsk | Bestiaire| vendredi 20h30|
-| "JEROBEAM FENDERSON":http://www.jerobeamfenderson.net/ (Autriche)| Nuclear Black Noise| vendredi 21h30|
+| "JEROBEAM FENDERSON (Autriche)":http://www.jerobeamfenderson.net/ | Nuclear Black Noise| vendredi 21h30|
 | "RYBN":http://rybn.org/| FlashCrash| vendredi 22h30|
-| LIONEL D| Suicide à l'homéopathie| samedi|
-| MARGOT LANÇON & MIADANA RANDRIAMORASATA| Avatar| samedi 21h30|
+| "GUILLAUME BAUTISTA":http://www.guillaumebautista.com/| Same player shoot again| samedi 15h-17h
+| LIONEL D| Suicide à l'homéopathie| samedi 20h|
+| "MARGOT LANÇON MIADANA RANDRIAMORASATA":http://echovisuellevj.over-blog.com/  "et JULIETTE VIRLET":http://juliette.virlet.org/| Avatar| samedi 20h30|
+| "1KA":https://labo1ka.wordpress.com/| Buto Noïse| Samedi 00h30|
