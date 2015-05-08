@@ -1,4 +1,4 @@
-h3. Performances et installations
+h3. !/images/LOGO_THSF_128.png!Performances et installations
 
 | "POUSSY DRAMA":https://www.indiegogo.com/projects/le-cabinet-mobile-du-docteure-duchesne| Consultations en DIY open source sexologie| du 14 au 17 mai"|
 | BODY BOUDHISME | Lévitation Assistée par Ordinateur| du 14 au 17 mai|
@@ -13,7 +13,7 @@ h3. Performances et installations
 | "POBORSK":https://soundcloud.com/poborsk | Bestiaire| vendredi 20h30|
 | "JEROBEAM FENDERSON (Autriche)":http://www.jerobeamfenderson.net/ | Nuclear Black Noise| vendredi 21h30|
 | "RYBN":http://rybn.org/| FlashCrash| vendredi 22h30|
-| "GUILLAUME BAUTISTA":http://www.guillaumebautista.com/| Same player shoot again| samedi 15h-17h
+| "GUILLAUME BAUTISTA":http://www.guillaumebautista.com/| Same player shoot again| samedi 15h-17h |
 | LIONEL D| Suicide à l'homéopathie| samedi 20h|
-| "MARGOT LANÇON MIADANA RANDRIAMORASATA":http://echovisuellevj.over-blog.com/  "et JULIETTE VIRLET":http://juliette.virlet.org/| Avatar| samedi 20h30|
-| "1KA":https://labo1ka.wordpress.com/| Buto Noïse| Samedi 00h30|
+| "MARGOT LANÇON MIADANA RANDRIAMORASATA":http://echovisuellevj.over-blog.com/  "et JULIETTE VIRLET":http://juliette.virlet.org/| Avatar| samedi|
+| "1KA":https://labo1ka.wordpress.com/| Buto Noïse| Samedi|

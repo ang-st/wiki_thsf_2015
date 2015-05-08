@@ -1,4 +1,4 @@
-h3. !</images/globe.png! Conférences 
+h3. !/images/LOGO_THSF_128.png! Conférences 
 
 | Bernard STIEGLER ("Philosophe":https://fr.wikipedia.org/wiki/Bernard_Stiegler)| Ouverture THSF 2015 LESS IS MORE| jeudi 16h|
 | Philippe LANGLOIS (télécommunications et sécurité sur le net) | LTE et VoLTE Pwns: insécurité à long terme | jeudi 18h|
@@ -11,4 +11,8 @@ h3. !</images/globe.png! Conférences
 | Lord EPSYLON | BorderCheck - Les réalités physique et politique derrière internet | samedi 16h|
 |Jérémie ZIMMERMAN (cofondateur de la "Quadrature du Net":https://www.laquadrature.net/fr) | Droits et libertés sur Internet | samedi 17h|
 | Damien CAUQUIL ("Virtualabs":http://www.virtualabs.fr/)| Reverse matériel de clavier sans-fil| dimanche 14h|
-| Julien BETHENCOURT (Philosophe)| La gouvernance collaborative - trois expériences en entreprise| dimanche 15h|
+|Alexandre Korber ( "Usinette":http://usinette.org/)|Trike Version 1.5 : Tricycle couché sans soudure | dimanche 15h|
+| Julien BETHENCOURT (Philosophe)| La gouvernance collaborative - trois expériences en entreprise| dimanche 15h30|
+|Lora FABIAN - Mathieu (geb) GOESSENS (Telecom bretagne)|Protocoles ouverts et standardisés pour objets connectés (IoT)| dimanche 16h|
+|Jimmy & Drix | Tangible Display : www.Twiz.io |dimanche 17h|
+
