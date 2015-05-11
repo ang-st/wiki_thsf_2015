@@ -1,9 +1,9 @@
-h3. Conférences 
+h3. Conférences !/images/LOGO_THSF_128.png!
 
 | Bernard STIEGLER ("Philosophe":https://fr.wikipedia.org/wiki/Bernard_Stiegler)| Ouverture THSF 2015 LESS IS MORE| jeudi 16h|
-| Philippe LANGLOIS (télécommunications et sécurité sur le net) | LTE et VoLTE Pwns: insécurité à long terme | jeudi 18h|
+| Philippe LANGLOIS (Founder & CEO chez "P1 Security":http://p1sec.com) | LTE et VoLTE Pwns: insécurité à long terme | jeudi 18h|
 | Sylvain Courrèges (historien)| Services de renseignement et lutte anti-subversive| vendredi 17h30|
-| fo0 ("RSF":https://fr.rsf.org/ et ex "Telecomix":http://telecomix.org/) et Grégoire POUGET ("RSF":https://fr.rsf.org/) | Hacktivisme au Moyen-Orient, la loi de renseignement, Opération Colateral Freedom | vendredi 18h30|
+| fo0 ("RSF":https://fr.rsf.org/) et Grégoire POUGET ("RSF":https://fr.rsf.org/) | Hacktivisme au Moyen-Orient, la loi de renseignement, Opération Colateral Freedom | vendredi 18h30|
 | Jérôme HOURDEAUX ("Mediapart":http://www.mediapart.fr/) et fo0 ("RSF":https://fr.rsf.org/)|Table ronde: hacktivisme et medias| vendredi 19h30|
 | "Yunohost":https://yunohost.org/#/whatsyunohost_fr | l’Auto Hebergement | samedi 13h|
 | Renaud LIFCHITZ ( chercheur chez "OPPIDA":http://www.oppida.fr/qui-sommes-nous--/presentation-de-la-societe/ )  | L’ordinateur quantique en pratique et ses impacts sur la cryptographie | samedi 14h|
