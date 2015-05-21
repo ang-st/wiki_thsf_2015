@@ -9,4 +9,4 @@ p=. "tetalab":http://tetalab.org/
 
 p=. "mix'art myrys":http://mixart-myrys.org/
 
-p=. "smeuh social THSF":https://thsf.smeuh.org/
+
