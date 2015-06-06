@@ -7,6 +7,12 @@ var Bookshelf = require('bookshelf');
 var async = require('async');
 var textile = require('textile-js')
 
+var promisify = require("promisify-node");
+
+var fse = promisify(require("fs-extra"));
+fse.ensureDir = promisify(fse.ensureDir);
+
+
 var nodegit = require("nodegit")
 
 var Markdown =  textile //Markdown = require('js-markdown-extra').Markdown
@@ -43,7 +49,9 @@ function pathFromDir() {
   return Path.join(__dirname, "pages");
 }
 
-
+function repoPath(name) {
+  return Path.join( name + ".markdown");
+}
 function fullPath(files) {
   var paths = []
   for (var i= 0; i < files.length; i++)
@@ -142,18 +150,20 @@ exports.editPage = function (name, callback) {
 // Saving is simple.  Just put the markdown in the file
 exports.savePage = function (name, value, callback) {
   var pathFile = pathFromNameMd(name);
+  var repos_relative = repoPath(name); 
   FS.writeFile(pathFile, value.replace(/\r/g,""), function (){
               
               
               
              
-  
+  console.log(pathFile)
   var repo;
   var index;
   var oid;
 
   nodegit.Repository.open(Path.resolve(__dirname, "pages/.git"))
     .then(function(repoResult) {
+        console.log(repoResult)
         repo = repoResult;
     })
     .then(function (){ 
@@ -165,7 +175,7 @@ exports.savePage = function (name, value, callback) {
     })
     .then(function() {
      // this file is in the root of the directory and doesn't need a full path
-      return index.addByPath(name);
+      return index.addByPath(repos_relative);
     })
     .then(function() {
   // this will write both files to the index
