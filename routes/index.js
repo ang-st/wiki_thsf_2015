@@ -11,6 +11,7 @@ var bcrypt = require('bcrypt-nodejs');
 // Load a page from the database and render as html
 exports.index = function (req, res, next) {
   DB.loadPage(req.params.name, function (err, page) {
+    console.log("___" + page)
     if (err) return next(err);
     if (page.exists==false && !req.isAuthenticated())
       res.redirect('/')

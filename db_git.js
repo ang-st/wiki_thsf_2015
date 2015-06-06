@@ -7,7 +7,6 @@ var Bookshelf = require('bookshelf');
 var async = require('async');
 var textile = require('textile-js')
 
-var nodegit = require("nodegit")
 
 var Markdown =  textile //Markdown = require('js-markdown-extra').Markdown
 
@@ -15,7 +14,6 @@ function orderize(files){
    var pageObjs = []
    for (var i = 0; i<files.length; i++){
      var file = files[i].name
-     console.log(file)
      var order = parseInt(file.split("_")[0])
      if(!isNaN(order)) {
       var divId = file.split("_")[1].split(".markdown")[0]
@@ -55,7 +53,6 @@ function fullPath(files) {
 // Load a file, parse the title and generate the HTML
 exports.loadPage = function (name, callback) {
   var path = pathFromNameMd(name);
-  console.log(path)
 //  if (name != "home"){
 //    return callback(null,{exists: false})
 
@@ -63,30 +60,19 @@ exports.loadPage = function (name, callback) {
   
 
   FS.readdir(pathFromDir(), function(err,files){
+      var pathfiles=fullPath(files)
       var fileObj = []
-      var file_ext=".markdown"
-      var clean_list = []
-      for( var  i = 0; i < files.length; i++){
-          var f=files[i]
-          if (f.slice( - file_ext.length, f.length ) === file_ext) {
-            clean_list.push(f)
-          }
-       }
-      files = clean_list
-      
-      var pathfiles=fullPath(files) 
       async.map(pathfiles, FS.readFile, function(err, data){
           for( var  i = 0; i < files.length; i++){
-              try{
-                console.log(f)
-                var html = Markdown(data[i].toString().replace(/\r/g,""))
-                fileObj.push({name : files[i], markdown:data[i].toString(), html:html} )
-              }
-               catch (err){ }
-                  console.log(err)
-              }
+            //console.log(files[i])
+            try{
+              var html = Markdown(data[i].toString().replace(/\r/g,""))
+              fileObj.push({name : files[i], markdown:data[i].toString(), html:html} )
+            }
+            catch (err){ }
+            
+          }
           var torender = orderize(fileObj)
-          
           callback(null,{exists:true, torender:torender})
           
       })  
@@ -141,21 +127,9 @@ exports.editPage = function (name, callback) {
 };
 // Saving is simple.  Just put the markdown in the file
 exports.savePage = function (name, value, callback) {
-  var pathFile = pathFromNameMd(name);
-  FS.writeFile(pathFile, value.replace(/\r/g,""), function (){
-              
-              
-              
-             
-  
-  var repo;
-  var index;
-  var oid;
-
-  nodegit.Repository.open(Path.resolve(__dirname, "pages/.git"))
-    .then(function(repoResult) {
-        repo = repoResult;
-    })
+  var path = pathFromNameMd(name);
+  FS.writeFile(path, value.replace(/\r/g,""), callback);
+  nodegit.Repository.open("pages")
     .then(function (){ 
       return repo.openIndex();
     })
@@ -191,10 +165,7 @@ exports.savePage = function (name, value, callback) {
     })
     .done(function(commitId) {
       console.log("New Commit: ", commitId);
-      callback()
     });
-
-  })
 
 };
 

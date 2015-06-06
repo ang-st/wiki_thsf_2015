@@ -1,4 +1,4 @@
-h3. Conférences !/images/LOGO_THSF_128.png!
+h3. ConférenceZ !/images/LOGO_THSF_128.png!
 
 | Célia IZOARD ("Revue Z":http://www.zite.fr/-Le-Journal)| L'informatique peut-elle casser des briques?| jeudi à partir de 16h|
 | Bernard STIEGLER ("Philosophe":https://fr.wikipedia.org/wiki/Bernard_Stiegler)|Un changement possible? | jeudi (suite)|
